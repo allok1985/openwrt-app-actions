@@ -72,20 +72,20 @@ jobs:
           sudo timedatectl set-timezone "$TZ"
           # curl -fsSL https://raw.githubusercontent.com/P3TERX/dotfiles/master/.bashrc >> ~/.bashrc
 
-     - name: Free Disk Space (Ubuntu)
-       uses: jlumbroso/free-disk-space@main
-       with:
-         # this might remove tools that are actually needed,
-         # if set to "true" but frees about 6 GB
-         tool-cache: true
+      - name: Free Disk Space (Ubuntu)
+        uses: jlumbroso/free-disk-space@main
+        with:
+          # this might remove tools that are actually needed,
+          # if set to "true" but frees about 6 GB
+          tool-cache: true
         
-         # all of these default to true, but feel free to set to
-         # "false" if necessary for your workflow
-         android: true
-         dotnet: true
-         haskell: true
-         large-packages: true
-         swap-storage: true
+          # all of these default to true, but feel free to set to
+          # "false" if necessary for your workflow
+          android: true
+          dotnet: true
+          haskell: true
+          large-packages: true
+          swap-storage: true
 
       - name: Download SDK
         run: wget ${SDK_URL}${SDK_NAME}.tar.xz
