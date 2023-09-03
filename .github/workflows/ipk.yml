@@ -1,4 +1,4 @@
-name: Build IPKs
+name: Build IPK
 
 on:
   repository_dispatch:
